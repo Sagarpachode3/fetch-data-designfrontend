@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../style/Card.css";
+import Modal from "./Modal";
 
 const Card = ({ post }) => {
   const printDate = (numbers) => {
@@ -24,11 +25,10 @@ const Card = ({ post }) => {
     return `${month} ${day}, ${year}`;
   };
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
 
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
+  function openModal() {
+    return <Modal />;
+  }
 
   const closeModal = () => {
     setIsModalOpen(false);
