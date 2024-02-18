@@ -37,19 +37,12 @@ const Card = ({ post }) => {
   return (
     <div className="card">
       <div className="image-container">
-        <img
-          src={post.thumbnail.small}
-          alt="Thumbnail"
-          className="thumbnail"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          onClick={openModal}
-        />
-        {isHovered && !isModalOpen && (
-          <div className="learn-more" onClick={openModal}>
+        <img src={post.thumbnail.small} alt="Thumbnail" className="thumbnail" />
+        <div className="learn-more">
+          <h3 className="learn-more-content" onClick={openModal}>
             Learn More
-          </div>
-        )}
+          </h3>
+        </div>
       </div>
       <div className="modal">
         <div className="circles-container">
